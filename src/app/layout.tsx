@@ -1,16 +1,10 @@
 import type { Metadata } from 'next';
-import { Cinzel, Plus_Jakarta_Sans } from 'next/font/google';
+import { Cinzel } from 'next/font/google';
 import '../globals.css';
 
 const cinzel = Cinzel({
   subsets: ['latin'],
   variable: '--font-cinzel',
-  display: 'swap',
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin', 'vietnamese'],
-  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -33,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className="scroll-smooth">
-      <body className={`${cinzel.variable} ${plusJakartaSans.variable} font-sans bg-[#0b0f14] text-[#e8ecf1] antialiased`}>
+      <body className={`${cinzel.variable} font-sf font-sans bg-[#0b0f14] text-[#e8ecf1] antialiased`}>
         {children}
       </body>
     </html>

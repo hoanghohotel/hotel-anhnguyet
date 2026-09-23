@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 @layer base {
   :root {
@@ -7,19 +13,27 @@
     --champagne: #d4af37;
     --champagne-light: #f4e8d0;
     --porcelain: #f8f9fa;
+    --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   body {
     background-color: #0b0f14;
     color: #e8ecf1;
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
 
   h1, h2, h3, .font-display {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", serif;
     letter-spacing: -0.01em;
   }
+}
+
+.font-sf {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* ==========================================================
