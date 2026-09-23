@@ -1,0 +1,6 @@
+{
+  "name": "Nhà Hàng & Khách Sạn Ánh Nguyệt - Cà Mau",
+  "description": "Website chính thức của Nhà hàng & Khách sạn Ánh Nguyệt tại trung tâm TP. Cà Mau. Thiết kế phong cách Apple Liquid Glass sang trọng, thông tin phòng VIP, ẩm thực đặc sản Cà Mau và đặt bàn/phòng trực tuyến.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

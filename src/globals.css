@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-deep: #0b0f14;
+    --bg-surface: #121820;
+    --champagne: #d4af37;
+    --champagne-light: #f4e8d0;
+    --porcelain: #f8f9fa;
+  }
+
+  body {
+    background-color: #0b0f14;
+    color: #e8ecf1;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* ==========================================================
+   APPLE LIQUID GLASS (GLASSMORPHISM) COMPONENT SYSTEM
+   ========================================================== */
+
+/* Nền kính Liquid Glass cao cấp chuẩn Apple */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Biến thể kính nổi trên nền ảnh/hero */
+.liquid-glass-hero {
+  background: rgba(18, 24, 32, 0.55);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 30px 60px -20px rgba(0, 0, 0, 0.7),
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* Kính thẻ nội dung (Card Liquid Glass) */
+.liquid-glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 15px 35px -10px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 30px -8px rgba(212, 175, 55, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Nút bấm Champagne Liquid Button */
+.liquid-btn-champagne {
+  background: linear-gradient(135deg, #d4af37 0%, #c59b27 100%);
+  color: #0b0f14;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 10px 25px -5px rgba(212, 175, 55, 0.45),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-btn-champagne:hover {
+  background: linear-gradient(135deg, #e5c358 0%, #d4af37 100%);
+  box-shadow: 
+    0 14px 30px -4px rgba(212, 175, 55, 0.6),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+/* Nút phụ kính trong mờ */
+.liquid-btn-ghost {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #f8f9fa;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Hiệu ứng hào quang nền Champagne dịu nhẹ */
+.ambient-champagne-glow {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0) 70%);
+  filter: blur(60px);
+}
+
+/* Typography Gradient */
+.text-gradient-champagne {
+  background: linear-gradient(135deg, #ffffff 30%, #f4e8d0 65%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f4e8d0 0%, #d4af37 60%, #aa8214 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tùy chỉnh thanh cuộn thanh lịch */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  border: 2px solid #0b0f14;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.4);
+}
+
+/* Hiệu ứng nhấp nhô tinh tế (Subtle Float/Bounce) */
+@keyframes subtle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-subtle-bounce {
+  animation: subtle-bounce 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
