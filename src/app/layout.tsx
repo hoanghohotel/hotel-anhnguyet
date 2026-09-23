@@ -1,12 +1,5 @@
 import type { Metadata } from 'next';
-import { Cinzel } from 'next/font/google';
 import '../globals.css';
-
-const cinzel = Cinzel({
-  subsets: ['latin'],
-  variable: '--font-cinzel',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'Nhà Hàng & Khách Sạn Ánh Nguyệt - Cà Mau | Đẳng Cấp Sang Trọng',
@@ -27,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className="scroll-smooth">
-      <body className={`${cinzel.variable} font-sf font-sans bg-[#0b0f14] text-[#e8ecf1] antialiased`}>
+      <body className="font-sf font-sans bg-[#0b0f14] text-[#e8ecf1] antialiased">
         {children}
       </body>
     </html>
